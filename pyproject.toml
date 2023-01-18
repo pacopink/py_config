@@ -4,7 +4,7 @@ build-backend = "hatchling.build"
 
 [project]
 name = "yaml_json_config_paco"
-version = "0.0.2"
+version = "0.0.4"
 authors = [
   { name="Paco Li Junting", email="13602887904@163.com" },
 ]

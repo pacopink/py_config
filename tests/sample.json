@@ -4,7 +4,10 @@
   "boss": {
     "name": "alpha",
     "id": 1,
-    "age": 40
+    "age": 40,
+    "linkman": {
+      "name": "omega"
+    }
   },
   "members": [
     {

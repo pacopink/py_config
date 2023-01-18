@@ -1,3 +1,4 @@
+"""defined GenericItem for yaml/json <-> object transformation"""
 from collections import OrderedDict
 from .OrderedDictYaml import ordered_yaml_dump, ordered_yaml_load
 import json
@@ -70,12 +71,13 @@ class GenericItem(object):
                 if loose: continue
                 # 期望一个OrderedDict的List
                 raise YamlJsonException("no valid attribute: {} found for conver to list of {}".format(attr, __KLASS__))
+            l = list()
             for x in self.__dict__[attr]:
                 y = __KLASS__()
                 y.load_from_dict(x)
                 y.validate_user_items()
-                o[id(y)] = y
-            self.__dict__[attr] = o
+                l.append(y)
+            self.__dict__[attr] = l
         if not loose:
             self.validate_user_items()
 
@@ -125,7 +127,7 @@ class GenericItem(object):
             if v == "":
                 continue
             if attribute_name in to_list:
-                v = [n.dump_to_dict() for n in v.values()]
+                v = [n.dump_to_dict() for n in v]
             if isinstance(v, GenericItem):
                 v = v.dump_to_dict()
             if isinstance(v, OrderedDict):

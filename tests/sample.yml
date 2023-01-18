@@ -4,6 +4,8 @@ boss:
   name: alpha
   id: 001
   age: 40
+  linkman:
+    name: omega
 members:
   - name: alpha
     id: 001 
