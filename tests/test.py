@@ -1,15 +1,16 @@
 #!/usr/bin/env python3
 
-from config.OrderedDictJsonYaml import GenericItem
+from ..src.OrderedDictJsonYaml import GenericItem
+
+class Person0(GenericItem):
+    """shallow load demo"""
+    pass
 
 class Person(GenericItem):
     def __init__(self):
-        """
         self.name = None
         self.id = None
         self.age = None        
-        """
-        pass
 
 class Company(GenericItem):
     def __init__(self):
