@@ -1,4 +1,4 @@
-#!/usr/bin/env python3
+"""load/dump key value properties file, comment lines will be kept"""
 import collections
 import re
 

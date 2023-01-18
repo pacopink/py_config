@@ -1,8 +1,8 @@
 #!/usr/bin/env python3
 
-from ..src.OrderedDictJsonYaml import GenericItem
+from yaml_json_config_paco.OrderedDictJsonYaml import GenericItem
 
-class Person0(GenericItem):
+class Company0(GenericItem):
     """shallow load demo"""
     pass
 
@@ -24,10 +24,15 @@ class Company(GenericItem):
         return (('boss', Person),)
 
 if __name__=='__main__':
-    company = Company.make_from_file("test.yml")
-    print(company.yamlize())
-    with open("test.json", "w", encoding='utf8') as f:
-        f.write(company.jsonify())
-    company1 = Company.make_from_file("test.json")
-    print(company1.yamlize())
-    print(company1.jsonify(indent=2))
+    company0 = Company0.from_file("sample.yml") 
+    print(company0.address)
+    print(company0.telephone)
+    print(company0.boss)
+    print(company0.members)
+    #company = Company.from_file("sample.yml")
+    #print(company.yamlize())
+    #with open("sample.json", "w", encoding='utf8') as f:
+    #    f.write(company.jsonify())
+    #company1 = Company.from_file("sample.json")
+    #print(company1.yamlize())
+    #print(company1.jsonify(indent=2))
