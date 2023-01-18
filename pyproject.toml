@@ -1,0 +1,18 @@
+[project]
+name = "yaml_json_config_paco.li"
+version = "0.0.1"
+authors = [
+  { name="Paco Li Junting", email="13602887904@163.com" },
+]
+description = "A small example package"
+readme = "README.md"
+requires-python = ">=3.7"
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+]
+
+[project.urls]
+"Homepage" = "https://github.com/pacopink/py_config"
+"Bug Tracker" = "https://github.com/pacopink/py_config/issues"

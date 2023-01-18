@@ -1,0 +1,14 @@
+boss:
+  name: alpha
+  id: 123434
+  age: 42
+members:
+  - name: alpha
+    id: 123434
+    age: 42
+  - name: beta 
+    id: 123435
+    age: 43
+  - name: sigma
+    id: 123436
+    age: 43
